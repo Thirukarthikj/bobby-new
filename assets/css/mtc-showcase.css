@@ -1,0 +1,912 @@
+/* ==========================================================================
+   MTC Polymers Inspired Product Category Showcase
+   Tailored for Bobby Packaging
+   ========================================================================== */
+
+:root {
+  --mtc-blue: #0e4b8e;
+  --mtc-blue-dark: #073567;
+  --mtc-sblue: #5290cc;
+  --mtc-bg: #f2f8fd;
+  --mtc-white: #ffffff;
+  --mtc-text-dark: #222222;
+  --mtc-text-muted: #555555;
+  --mtc-border-radius: 12px;
+  --mtc-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+/* Showcase Section */
+.mtc-showcase-section {
+  background-color: var(--mtc-bg);
+  padding: 65px 0 75px;
+  position: relative;
+  width: 100%;
+  clear: both;
+  font-family: 'Poppins', 'Lato', sans-serif;
+  box-sizing: border-box;
+  scroll-margin-top: 115px;
+}
+
+.mtc-container {
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Header Typography (Inspired by MTC Polymers) */
+.mtc-section-header {
+  text-align: center;
+  max-width: 840px;
+  margin: 0 auto 40px;
+  padding: 0 15px;
+}
+
+.mtc-section-header h2 {
+  font-size: 36px;
+  line-height: 1.25;
+  color: var(--mtc-blue);
+  font-weight: 500;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.mtc-section-header h2 b {
+  font-weight: 800;
+  color: var(--mtc-blue);
+}
+
+.mtc-section-header p {
+  font-size: 17px;
+  line-height: 1.6;
+  color: var(--mtc-text-muted);
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* Filter Control Bar (Product Page) */
+.mtc-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 12px 22px;
+  margin: 0 auto 35px;
+  box-shadow: 0 4px 14px rgba(14, 75, 142, 0.08);
+  border: 1px solid rgba(14, 75, 142, 0.12);
+  transition: var(--mtc-transition);
+}
+
+.mtc-filter-status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--mtc-text-dark);
+}
+
+.mtc-filter-badge {
+  background: #e6f0fa;
+  color: var(--mtc-blue);
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  border: 1px solid rgba(14, 75, 142, 0.2);
+}
+
+.mtc-filter-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--mtc-blue);
+  color: #ffffff;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: var(--mtc-transition);
+}
+
+.mtc-filter-reset:hover {
+  background: var(--mtc-sblue);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Product Category Grid (Exact MTC Polymers 4-Column Layout) */
+.mtc-plist {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(250px, 1fr));
+  gap: 50px 25px;
+  margin-bottom: 50px;
+  padding-top: 35px;
+  box-sizing: border-box;
+}
+
+/* Individual Category Card */
+.mtc-pgroup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--mtc-transition);
+  padding-bottom: 24px;
+  outline: none;
+}
+
+/* Elevated White Card Box Background (MTC Polymers Signature Floating Effect) */
+.mtc-pgroup::after {
+  content: '';
+  position: absolute;
+  background: var(--mtc-white);
+  bottom: 0;
+  width: 84%;
+  height: 74%;
+  border-radius: var(--mtc-border-radius);
+  box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  z-index: -1;
+  transition: var(--mtc-transition);
+}
+
+/* Image Presentation (Extends ABOVE the white box for 3D physical depth) */
+.mtc-pimg {
+  position: relative;
+  overflow: visible;
+  height: 245px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.mtc-pimg img {
+  height: 230px;
+  max-width: 90%;
+  object-fit: contain;
+  transition: transform 0.35s ease, filter 0.35s ease;
+  filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.14));
+}
+
+/* Typography & Description */
+.mtc-pdesc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px 15px 4px;
+  z-index: 2;
+  box-sizing: border-box;
+}
+
+.mtc-pdesc h3 {
+  font-size: 19px;
+  line-height: 1.3;
+  color: #333333;
+  font-weight: 500;
+  margin: 0 0 14px;
+  letter-spacing: -0.2px;
+  transition: color 0.3s ease;
+}
+
+.mtc-pdesc h3 b {
+  font-weight: 700;
+  color: #111111;
+  display: block;
+}
+
+/* Subtle Action Button (MTC Polymers Metallic Radial Gradient) */
+.mtc-cbtn {
+  padding: 8px 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #ffffff !important;
+  border-radius: 8px;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) -6.82%),
+              radial-gradient(54.28% 50.28% at 16.39% 1.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%) #787878;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mtc-cbtn svg,
+.mtc-cbtn i {
+  font-size: 11px;
+  transition: transform 0.3s ease;
+}
+
+/* Card Hover Interactions */
+.mtc-pgroup:hover img {
+  transform: scale(1.07) translateY(-7px);
+  filter: drop-shadow(0 14px 22px rgba(0, 0, 0, 0.2));
+}
+
+.mtc-pgroup:hover::after {
+  border: 1.5px solid var(--mtc-sblue);
+  box-shadow: 0px 14px 30px rgba(14, 75, 142, 0.16);
+}
+
+.mtc-pgroup:hover .mtc-pdesc h3 {
+  color: var(--mtc-blue);
+}
+
+.mtc-pgroup:hover .mtc-cbtn {
+  background: var(--mtc-blue);
+  box-shadow: 0 4px 14px rgba(14, 75, 142, 0.35);
+}
+
+.mtc-pgroup:hover .mtc-cbtn svg,
+.mtc-pgroup:hover .mtc-cbtn i {
+  transform: translateX(4px);
+}
+
+/* Active Category State */
+.mtc-pgroup.active::after {
+  border: 2px solid var(--mtc-blue);
+  box-shadow: 0px 8px 24px rgba(14, 75, 142, 0.22);
+}
+
+.mtc-pgroup.active .mtc-cbtn {
+  background: var(--mtc-blue);
+}
+
+/* "View All Products" Bottom Navigation CTA */
+.mtc-bottom-cta {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.mtc-btn-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 34px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--mtc-blue);
+  border: 2px solid var(--mtc-blue);
+  border-radius: 8px;
+  background: #ffffff;
+  text-decoration: none;
+  transition: var(--mtc-transition);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+.mtc-btn-all:hover {
+  background: var(--mtc-blue);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(14, 75, 142, 0.25);
+  transform: translateY(-2px);
+}
+
+.mtc-btn-all svg,
+.mtc-btn-all i {
+  transition: transform 0.3s ease;
+}
+
+.mtc-btn-all:hover svg,
+.mtc-btn-all:hover i {
+  transform: translateX(5px);
+}
+
+/* Smooth filtering transition for product detail items */
+.p1[data-category] {
+  scroll-margin-top: 115px;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.p1.mtc-hidden {
+  display: none !important;
+}
+
+.p1.mtc-hidden + .sp {
+  display: none !important;
+}
+
+.p1.mtc-visible {
+  display: flex !important;
+  animation: mtcItemFadeIn 0.4s ease forwards;
+}
+
+@keyframes mtcItemFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==========================================================================
+   Responsive Breakpoints (Desktop -> Tablet -> Mobile)
+   ========================================================================== */
+
+/* Large Tablets & Small Laptops (992px to 1199px) */
+@media (max-width: 1199px) {
+  .mtc-plist {
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    gap: 35px 15px;
+  }
+  .mtc-pimg {
+    height: 220px;
+  }
+  .mtc-pimg img {
+    height: 205px;
+  }
+  .mtc-pgroup::after {
+    width: 86%;
+  }
+  .mtc-pdesc h3 {
+    font-size: 17px;
+  }
+}
+
+/* Tablets (768px to 991px) */
+@media (max-width: 991px) {
+  .mtc-plist {
+    grid-template-columns: repeat(2, minmax(260px, 1fr));
+    gap: 40px 25px;
+    padding-top: 20px;
+  }
+  .mtc-pgroup::after {
+    width: 85%;
+    height: 75%;
+  }
+  .mtc-section-header h2 {
+    font-size: 30px;
+  }
+  .mtc-section-header p {
+    font-size: 15px;
+  }
+}
+
+/* Mobile Devices (max-width: 767px) */
+@media (max-width: 767px) {
+  .mtc-showcase-section {
+    padding: 45px 0 55px;
+    scroll-margin-top: 90px;
+  }
+  .mtc-container {
+    width: 94%;
+  }
+  .mtc-section-header {
+    margin-bottom: 25px;
+  }
+  .mtc-section-header h2 {
+    font-size: 25px;
+  }
+  .mtc-section-header p {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .mtc-plist {
+    grid-template-columns: repeat(2, minmax(130px, 1fr));
+    gap: 25px 12px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+  }
+  .mtc-pgroup::after {
+    width: 92%;
+    height: 76%;
+    border-radius: 10px;
+  }
+  .mtc-pimg {
+    height: 170px;
+  }
+  .mtc-pimg img {
+    height: 155px;
+    max-width: 90%;
+  }
+  .mtc-pdesc {
+    padding: 10px 8px 0;
+  }
+  .mtc-pdesc h3 {
+    font-size: 15px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .mtc-cbtn {
+    padding: 6px 14px;
+    font-size: 11px;
+    border-radius: 6px;
+    letter-spacing: 0.3px;
+  }
+  .mtc-btn-all {
+    padding: 10px 22px;
+    font-size: 13px;
+  }
+  .mtc-filter-bar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    text-align: center;
+    padding: 12px 15px;
+  }
+  .mtc-filter-status {
+    justify-content: center;
+  }
+  .mtc-filter-reset {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile (max-width: 380px) */
+@media (max-width: 380px) {
+  .mtc-plist {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .mtc-pimg {
+    height: 200px;
+  }
+  .mtc-pimg img {
+    height: 185px;
+  }
+  .mtc-pgroup::after {
+    width: 85%;
+  }
+}
+
+/* ==========================================================================
+   MTC Polymers Industry Tabbed Showcase ("Industries We Serve")
+   ========================================================================== */
+
+.mtc-industry-section {
+  background: linear-gradient(to top, #f4f7fb 92%, #f2f8fd 85%);
+  padding: 60px 0 70px;
+  position: relative;
+  width: 100%;
+  clear: both;
+  font-family: 'Poppins', 'Lato', sans-serif;
+  box-sizing: border-box;
+  scroll-margin-top: 110px;
+  overflow: hidden;
+}
+
+.mtc-ind-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Tabs Navigation Row */
+.mtc-ind-tabs-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  gap: 8px;
+  padding: 4px 4px 0;
+  border-bottom: 3px solid #0e4b8e;
+  position: relative;
+  z-index: 3;
+}
+
+.mtc-ind-tabs-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.mtc-ind-tab-btn {
+  background: #bcdffb;
+  color: #2b394a;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 14px 42px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  position: relative;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.mtc-ind-tab-btn:hover:not(.active) {
+  background: #a9d4f9;
+  color: #0e4b8e;
+}
+
+.mtc-ind-tab-btn.active {
+  background: #ffffff;
+  color: #0e4b8e;
+  font-weight: 700;
+  border-top: 3px solid #0e4b8e;
+  box-shadow: 0 -4px 12px rgba(14, 75, 142, 0.12);
+  transform: translateY(1px);
+}
+
+/* Industry Tab Content Card */
+.mtc-ind-card {
+  background: #ffffff;
+  border-radius: 0 0 14px 14px;
+  box-shadow: 0 10px 35px rgba(14, 75, 142, 0.08);
+  border: 1px solid rgba(14, 75, 142, 0.1);
+  border-top: none;
+  padding: 45px 50px;
+  position: relative;
+  box-sizing: border-box;
+  min-height: 480px;
+}
+
+/* Tab Panels */
+.mtc-ind-panel {
+  display: none;
+  animation: mtcTabFadeIn 0.4s ease forwards;
+}
+
+.mtc-ind-panel.active {
+  display: grid;
+  grid-template-columns: 50% 46%;
+  gap: 4%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@keyframes mtcTabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Left Column Information */
+.mtc-ind-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.mtc-ind-info h3 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #0e4b8e;
+  text-transform: uppercase;
+  margin: 0 0 14px;
+  letter-spacing: -0.4px;
+}
+
+.mtc-ind-info p {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #4a5568;
+  margin: 0 0 24px;
+}
+
+.mtc-ind-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.mtc-ind-list li {
+  font-size: 15px;
+  font-weight: 500;
+  color: #2d3748;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  line-height: 1.4;
+}
+
+.mtc-ind-list li i,
+.mtc-ind-list li span.chevron {
+  color: #0e4b8e;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.mtc-ind-btn {
+  padding: 10px 28px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff !important;
+  background: radial-gradient(92.09% 85.42% at 86.3% 87.5%, rgba(0, 0, 0, 0.23) 0%, rgba(0, 0, 0, 0) -6.82%),
+              radial-gradient(54.28% 50.28% at 16.39% 1.83%, rgba(255, 255, 255, 0.413) 0%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 100%) #787878;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: fit-content;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.mtc-ind-btn:hover {
+  background: #0e4b8e;
+  box-shadow: 0 6px 18px rgba(14, 75, 142, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Right Column Visual & Slider */
+.mtc-ind-visual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  min-height: 400px;
+  background: radial-gradient(circle at center, rgba(14, 75, 142, 0.04) 0%, rgba(255, 255, 255, 0) 70%);
+  border-radius: 12px;
+  padding: 20px 10px;
+  box-sizing: border-box;
+}
+
+/* Background watermark pattern illustration */
+.mtc-ind-visual::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-image: radial-gradient(#0e4b8e 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+.mtc-slider-container {
+  width: 100%;
+  height: 340px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.mtc-slider-img {
+  position: absolute;
+  max-height: 320px;
+  max-width: 82%;
+  object-fit: contain;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transform: scale(0.95);
+  transition: opacity 0.35s ease, transform 0.35s ease, visibility 0.35s ease;
+  filter: drop-shadow(0 14px 20px rgba(0, 0, 0, 0.16));
+  pointer-events: none;
+}
+
+.mtc-slider-img.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 2;
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+.mtc-slider-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+  z-index: 3;
+}
+
+.mtc-slider-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  transition: all 0.25s ease;
+}
+
+.mtc-slider-dot.active {
+  background: #0e4b8e;
+  width: 24px;
+  border-radius: 10px;
+}
+
+/* Faded Watermark Title at Bottom */
+.mtc-ind-watermark {
+  text-align: center;
+  font-size: 46px;
+  font-weight: 900;
+  color: rgba(14, 75, 142, 0.05);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  margin: 35px 0 0;
+  user-select: none;
+  pointer-events: none;
+  line-height: 1;
+}
+
+/* Responsive adjustments for Industry Section */
+@media (max-width: 991px) {
+  .mtc-ind-tab-btn {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+  .mtc-ind-card {
+    padding: 35px 25px;
+  }
+  .mtc-ind-panel.active {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .mtc-ind-info {
+    order: 2;
+  }
+  .mtc-ind-visual {
+    order: 1;
+    min-height: 300px;
+  }
+  .mtc-slider-container {
+    height: 280px;
+  }
+  .mtc-slider-img {
+    max-height: 260px;
+  }
+  .mtc-ind-watermark {
+    font-size: 32px;
+    letter-spacing: 2px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mtc-ind-tab-btn {
+    padding: 10px 18px;
+    font-size: 13px;
+  }
+  .mtc-ind-card {
+    padding: 25px 16px;
+  }
+  .mtc-ind-info h3 {
+    font-size: 24px;
+  }
+  .mtc-ind-info p {
+    font-size: 14px;
+  }
+  .mtc-ind-list li {
+    font-size: 14px;
+  }
+  .mtc-slider-container {
+    height: 230px;
+  }
+  .mtc-slider-img {
+    max-height: 215px;
+  }
+  .mtc-ind-watermark {
+    font-size: 22px;
+  }
+}
+
+/* ==========================================================================
+   Pouch Variant Selector & Display Box (Interactive Snacks Showcase)
+   ========================================================================== */
+.pouch-variant-selector {
+  margin: 18px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.pouch-variant-label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--mtc-blue);
+}
+
+.pouch-thumb-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.pouch-thumb-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: #ffffff;
+  border: 1.5px solid #d2dce8;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.pouch-thumb-btn img {
+  width: 26px;
+  height: 34px;
+  object-fit: contain;
+  transition: transform 0.2s ease;
+}
+
+.pouch-thumb-btn:hover {
+  border-color: var(--mtc-sblue);
+  background: #f0f7ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(14, 75, 142, 0.12);
+}
+
+.pouch-thumb-btn:hover img {
+  transform: scale(1.1);
+}
+
+.pouch-thumb-btn.active {
+  border-color: var(--mtc-blue);
+  background: #e6f0fa;
+  color: var(--mtc-blue);
+  box-shadow: 0 2px 8px rgba(14, 75, 142, 0.2);
+}
+
+.pouch-display-box {
+  background: #f8fafc !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border-radius: 8px;
+  box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.04);
+}
+
+.pouch-display-box img {
+  object-fit: contain !important;
+  height: 94% !important;
+  width: auto !important;
+  max-width: 90% !important;
+  transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.25s ease !important;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.12));
+}
+
+.pouch-display-box img:hover {
+  transform: scale(1.08) !important;
+}
+
+

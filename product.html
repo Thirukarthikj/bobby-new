@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="./about.js"> -->
+    <link rel="icon" type="image/png" href="./assets/img/logo.jpg"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/product.css" />
+    <link rel="stylesheet" href="./assets/css/mtc-showcase.css" />
+    <title>Bobby Packaging</title>
+  </head>
+  <body>
+    <div class="whatsapp-icon">
+        <a href="https://wa.me/+918754002737/?text=Hello%20there!">
+          <img src="./assets/img/WhatsApp_icon.png" />
+        </a>
+      </div>
+    <div class="mobilenav">
+        <div class="mobilenavlogo">
+            <img src="./assets/img/logobg.png" alt="">
+        </div>
+        <!-- hamburger menuuu -->
+  
+        <nav role="navigation">
+        <div id="menuToggle">
+          <!--
+          A fake / hidden checkbox is used as click reciever,
+          so you can use the :checked selector on it.
+          -->
+          <input type="checkbox" />
+          
+          <!--
+          Some spans to act as a hamburger.
+          
+          They are acting like a real hamburger,
+          not that McDonalds stuff.
+          -->
+          <span></span>
+          <span></span>
+          <span></span>
+          
+          <!--
+          Too bad the menu has to be inside of the button
+          but hey, it's pure CSS magic.
+          -->
+          <ul id="menu">
+            <a href="./index.html"><li>Home</li></a>
+            <a href="./about.html"><li>About</li></a>
+            <a href="./product.html"><li>Products</li></a>
+            <a href="./index.html#industries"><li>Industries</li></a>
+            <a href="./gallery.html"><li>Gallery</li></a>
+            <a href="./contact.html"><li>Contact Us</li></a>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="nav">
+      <div class="subnav">
+        <div class="logod">
+          <img src="./assets/img/logobg.png" alt="" />
+        </div>
+        <div class="menud">
+          <a class="item" href="./index.html">
+            <div data-text="Main page" class="linktext">Home</div>
+          </a>
+          <a class="item" href="./about.html">
+            <div data-text="What we do" class="linktext">About</div>
+          </a>
+          <a class="item" href="./product.html">
+            <div data-text="See our works" class="linktext">Products</div>
+          </a>
+          <a class="item" href="./index.html#industries">
+            <div data-text="Industries" class="linktext">Industries</div>
+          </a>
+          <a class="item" href="./gallery.html">
+            <div data-text="Thoughts" class="linktext">Gallery</div>
+          </a>
+          <a class="item" href="./contact.html">
+            <div data-text="Get in touch" class="linktext">Contact</div>
+          </a>
+        </div>
+        <div class="icond">
+          <i class="fa-brands fa-square-whatsapp" id="i1" title="Whatsapp"></i>
+          <i
+            class="fa-brands fa-square-instagram"
+            id="i2"
+            title="Instagram"
+          ></i>
+          <!-- <i class="fa-brands fa-instagram" ></i> -->
+          <i class="fa-solid fa-envelope" id="i3" title="Email"></i>
+          <i class="fa-solid fa-circle-user" id="i4" title="Contact"></i>
+        </div>
+      </div>
+    </div>
+   
+   
+    
+      <div class="sum">
+        <!-- <h1>hello worl</h1> -->
+        <img src="./assets/img/3.png" alt="" />
+      </div>
+      <!-- MTC Polymers Inspired Product Category Showcase Section -->
+      <section class="mtc-showcase-section" id="product-showcase">
+        <div class="mtc-container">
+          <div class="mtc-section-header">
+            <h2><b>Our</b> Products</h2>
+            <p>Explore our complete range of flexible packaging solutions, designed to meet the needs of different products and industries.</p>
+          </div>
+
+          <div class="mtc-plist">
+            <!-- 1. LD Bags -->
+            <div class="mtc-pgroup" data-category="ld-bags">
+              <div class="mtc-pimg">
+                <img src="./assets/img/ld_bread_cover_cutout.png" alt="LD Bags" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>LD</b> Bags</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 2. HM Bags -->
+            <div class="mtc-pgroup" data-category="hm-bags">
+              <div class="mtc-pimg">
+                <img src="./assets/img/hm_bags_-removebg-preview.png" alt="HM Bags" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>HM</b> Bags</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 3. PP Bags -->
+            <div class="mtc-pgroup" data-category="pp-bags">
+              <div class="mtc-pimg">
+                <img src="./assets/img/pp_snack_cover_cutout.png" alt="PP Bags - Snack Packaging" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>PP</b> Bags</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 4. BOPP Bags -->
+            <div class="mtc-pgroup" data-category="bopp-bags">
+              <div class="mtc-pimg">
+                <img src="./assets/img/bopp_bags-removebg-preview.png" alt="BOPP Bags" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>BOPP</b> Bags</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 5. PET Pouches -->
+            <div class="mtc-pgroup" data-category="pet-pouches">
+              <div class="mtc-pimg">
+                <img src="./assets/img/pet pouches.png" alt="PET Pouches" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>PET</b> Pouches</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 6. PVC Pouches -->
+            <div class="mtc-pgroup" data-category="pvc-pouches">
+              <div class="mtc-pimg">
+                <img src="./assets/img/pvc-transparent-pouch-removebg-preview.png" alt="PVC Pouches" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>PVC</b> Pouches</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 7. LD & Laminated Rolls -->
+            <div class="mtc-pgroup" data-category="ld-roll">
+              <div class="mtc-pimg">
+                <img src="./assets/img/ld_roll-removebg-preview.png" alt="LD & Laminated Rolls" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>LD & Laminated</b> Rolls</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 8. Custom Printed Packaging -->
+            <div class="mtc-pgroup" data-category="custom-printed">
+              <div class="mtc-pimg">
+                <img src="./assets/img/custom_printed_milk_cutout.png" alt="Custom Printed Packaging" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>Custom Printed</b> Packaging</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+
+            <!-- 9. Stand-Up Zipper Snack Pouches -->
+            <div class="mtc-pgroup" data-category="snack-pouches">
+              <div class="mtc-pimg">
+                <img src="./assets/img/sri_mahalakshmi_snack_cutout.png" alt="Stand-Up Zipper Snack Pouches" width="260" height="240" loading="lazy">
+              </div>
+              <div class="mtc-pdesc">
+                <h3><b>Snack & Sweet</b> Pouches</h3>
+                <span class="mtc-cbtn">
+                  View Products
+                  <i class="fa-solid fa-arrow-right"></i>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Filter Status Bar -->
+          <div class="mtc-filter-bar" id="mtc-filter-bar" style="display: none;">
+            <div class="mtc-filter-status">
+              <span>Showing:</span>
+              <span class="mtc-filter-badge" id="mtc-filter-badge">All Products</span>
+            </div>
+            <button class="mtc-filter-reset" id="mtc-filter-reset" type="button">
+              <i class="fa-solid fa-arrow-rotate-left"></i> Return to All Categories
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="p1" id="cat-ld-bags" data-category="ld-bags">
+        <div class="p2">
+            <div class="subp1">
+                <h2>LD Bags</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                        <p>
+                            LD bags, or Low-Density Polyethylene (LDPE) bags, are a type of plastic bag made from low-density polyethylene. They are widely used due to their flexibility, strength, and resistance to moisture. LD bags are known for their versatility and are commonly used in various industries for packaging and storage purposes.
+                        </p>    
+                    </div>
+                    <div class="subtext2">
+                        <p>
+                            LD bags are available in an extensive array of sizes and thicknesses, allowing them to be tailored for specific needs, from small, lightweight items to larger, bulkier goods.
+                        </p>
+                </div>
+                <div class="bt">
+                    <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20LD%20BAGS%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/photoroom/bread cover 3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-hm-bags" data-category="hm-bags">
+        <div class="p2">
+            <div class="subp1">
+                <h2>HM Bags</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                        <p>HM bags, or High Molecular High-Density Polyethylene (HM-HDPE) bags, are a type of plastic bag made from high molecular weight high-density polyethylene. These bags are known for their strength, durability, and resistance to punctures and tears.</p>
+                    </div>
+                    <div class="subtext2">
+                        <p>They are available in various sizes, thicknesses, and designs to meet different packaging needs.</p>
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20HM%20BAGS%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/photoroom/salt cover.jpg" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-ld-roll" data-category="ld-roll">
+        <div class="p2">
+            <div class="subp1">
+                <h2>LD Roll</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>
+                        An LD roll, or Low-Density Polyethylene (LDPE) roll, is a continuous sheet of low-density polyethylene material wound onto a roll. This form of packaging material is versatile and commonly used in various industries due to its flexibility, strength, and protective properties.
+                    </p>    
+                    </div>
+                    <div class="subtext2">
+                    <p>LD rolls can be used in a wide range of applications, making them a versatile choice for packaging and protective needs.</p>    
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20LD%20ROLL%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/infra/ld roll3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-pp-bags" data-category="pp-bags">
+        <div class="p2">
+            <div class="subp1">
+                <h2>PP Bags</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>PP bags, or polypropylene bags, are a type of packaging made from polypropylene resin, known for its versatility and durability. These bags are widely used across various industries due to their strength, resistance to moisture, and ability to be recycled, making them an environmentally friendly choice.</p>    
+                    </div>
+                    <div class="subtext2">
+                        <p>
+                            PP bags are versatile and can be used in a wide range of applications across different industries.
+                        </p></div>
+                        <div class="bt">
+                            <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20PP%20BAGS%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                        </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/photoroom/snack cover 4.jpg" alt="Filled Banana Chips Snack Packaging Pouch">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-pet-pouches" data-category="pet-pouches">
+        <div class="p2">
+            <div class="subp1">
+                <h2>PET Pouches</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>
+                        PET pouches, or polyethylene terephthalate pouches, are packaging containers made from PET plastic, known for their clarity, strength, and versatility. These pouches are widely used across industries due to their ability to preserve product freshness, enhance shelf appeal, and provide reliable packaging solutions.
+                    </p>    
+                    </div>
+                    <div class="subtext2">
+                    <p>They are available in various sizes, shapes, and forms (stand-up pouches, flat pouches, etc.), making them suitable for a wide range of products.</p>    
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20PET%20POUCHES%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/photoroom/detergent bags.jpg" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+        
+      </div>
+      <div class="p1" id="cat-bopp-bags" data-category="bopp-bags">
+        <div class="p2">
+            <div class="subp1">
+                <h2>BOPP Bags</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>BOPP bags, or Biaxially Oriented Polypropylene bags, are a type of packaging made from polypropylene film that has been stretched in both the machine direction (MD) and across the transverse direction (TD). These bags are highly versatile and are used across various industries due to their excellent clarity, strength, and moisture resistance.</p>    
+                    </div>
+                    <div class="subtext2">
+                    <p>BOPP bags are available in various types including flat bags, gusseted bags, and resealable bags, catering to different packaging needs.</p>    
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20BOPP%20BAGS%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/img/boppbag2.png" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-pvc-pouches" data-category="pvc-pouches">
+        <div class="p2">
+            <div class="subp1">
+                <h2>PVC Pouches</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>PVC pouches, or Polyvinyl Chloride pouches, are versatile packaging solutions made from PVC material, known for its durability, clarity, and flexibility. These pouches are widely used across industries due to their excellent protective properties and ability to enhance product visibility.</p>    
+                    </div>
+                    <div class="subtext2">
+                    <p>They are available in various forms including zip-lock pouches, stand-up pouches, and pouches with hanging holes, catering to different packaging needs.</p>    
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20PVC%20POUCHES%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/img/pvcpouches.png" alt="">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+      <div class="p1" id="cat-custom-printed" data-category="custom-printed">
+        <div class="p2">
+            <div class="subp1">
+                <h2>Custom Printed Packaging</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p>
+                        Custom printed packaging solutions tailored for foods, dairy, beverages, snacks, and retail consumer goods. Our high-definition multi-color flexographic and rotogravure printing capabilities deliver vibrant brand artwork with superior gloss and protective barrier coatings.
+                    </p>    
+                    </div>
+                    <div class="subtext2">
+                    <p>Available in center-seal pouches, three-side seal pouches, side-gusset bags, and continuous roll stock with customized barrier options for optimal product preservation and shelf-life.</p>    
+                    </div>
+                    <div class="bt">
+                        <a href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20CUSTOM%20PRINTED%20PACKAGING%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23">
+                    <img src="./assets/photoroom/milk cover 3.jpg" alt="Custom Printed Packaging">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+
+      <!-- 9. Stand-Up Zipper Snack Pouches -->
+      <div class="p1" id="cat-snack-pouches" data-category="snack-pouches">
+        <div class="p2">
+            <div class="subp1">
+                <h2 id="snack-pouch-heading">Stand-Up Zipper Snack Pouches</h2>
+            </div>
+            <div class="subp2">
+                <div class="subp22">
+                    <div class="subtext1">
+                    <p id="snack-pouch-desc1">
+                        High-barrier stand-up zipper pouches engineered specifically for sweets, snacks, namkeens, and bakery delicacies. Manufactured with crystal-clear transparent viewing windows, resealable airtight zip locks, and multi-layer food-grade barrier films that seal in freshness, crunchiness, and aroma.
+                    </p>    
+                    </div>
+                    <div class="subtext2">
+                    <p id="snack-pouch-desc2">
+                        Features custom multi-color rotogravure printing for top brands including Sri Maha Lakshmi Sweets & Snacks, Shri Saranga Traders, and SRS Sriram Bakery. Complete with tear notches, round bottom gussets, and moisture-proof protection.
+                    </p>    
+                    </div>
+
+                    <!-- Interactive Pouch Variant Switcher -->
+                    <div class="pouch-variant-selector">
+                      <span class="pouch-variant-label">Choose Packaging Variant:</span>
+                      <div class="pouch-thumb-row">
+                        <button type="button" class="pouch-thumb-btn active" data-img="./assets/photoroom/sri_mahalakshmi_snack_pouch.jpg" data-title="Sri Maha Lakshmi Sweets & Snacks" data-desc1="High-barrier stand-up zipper pouches with transparent hexagonal window, filled with crispy South Indian mixture, sev, boondi, and fried peanuts. Features resealable airtight zipper." data-desc2="Custom printed in vibrant teal and magenta with Goddess Lakshmi insignia, tear notches, and stand-up bottom gusset for maximum shelf presence.">
+                          <img src="./assets/img/sri_mahalakshmi_snack_cutout.png" alt="Sri Maha Lakshmi">
+                          <span>Maha Lakshmi</span>
+                        </button>
+                        <button type="button" class="pouch-thumb-btn" data-img="./assets/photoroom/shri_saranga_snack_pouch.jpg" data-title="Shri Saranga Traders" data-desc1="Custom-printed snack pouch with geometric viewing window filled with golden crispy banana chips, potato wafers, and crunchy namkeen." data-desc2="Printed in high-definition royal blue with hexagonal brand logo, FSSAI compliance marking, and tamper-evident heat-sealed edges.">
+                          <img src="./assets/img/shri_saranga_snack_cutout.png" alt="Shri Saranga Traders">
+                          <span>Saranga Traders</span>
+                        </button>
+                        <button type="button" class="pouch-thumb-btn" data-img="./assets/photoroom/srs_sriram_sweets_pouch.jpg" data-title="SRS Sriram Sweets & Bakery" data-desc1="Glossy transparent packaging pouch filled with fresh laddoos, crispy handmade murukku, crunchy mixture, and traditional bakery delicacies." data-desc2="Rich royal magenta branding with scalloped borders, crown emblem, and 100% virgin food-grade recyclable material.">
+                          <img src="./assets/img/srs_sriram_sweets_cutout.png" alt="SRS Sriram Sweets">
+                          <span>SRS Sriram</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="bt">
+                        <a id="snack-pouch-whatsapp" href="https://wa.me/+918754002737?text=I'm%20interested%20in%20your%20STAND-UP%20ZIPPER%20SNACK%20POUCHES%20Product"><i class="fa-brands fa-whatsapp"></i>Enquire Now</a>
+                    </div>
+                </div>
+                <div class="subp23 pouch-display-box">
+                    <img id="snack-pouch-main-img" src="./assets/photoroom/sri_mahalakshmi_snack_pouch.jpg" alt="Sri Maha Lakshmi Sweets & Snacks Stand-Up Pouch">
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="sp">
+
+      </div>
+
+
+
+
+
+
+
+    <div class="summa">
+        <p></p>
+        <p id="np1"></p>
+        <p id="np2"></p>
+    </div>
+    <div class="footer">
+        <div class="subfooter">
+            <div class="fdiv">
+                <div class="minicon">
+                    <div class="con2">
+                        <h2>Bobby Packaging</h2>
+                    </div>
+                    <div class="cons">
+                       <p>"Preserving your products,
+                        showcasing your brand."</p>
+                        <h2>call:+91 87540 02737</h2>
+                            <h2>Email:bobbypackaging18@gmail.com</h2>
+      
+                    </div>
+                    <div class="footer-social-icon">
+                        <span>Follow us</span>
+                        <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                        <a href="#"><i class="fab fa-instagram instagram-bg"></i></i></a>
+                        <a href="mailto:bobbypackaging18@gmail.com"><i class="fa-solid fa-envelope google-bg"></i></a>
+                        <a href="https://wa.me/8754002737?text=Hello%20there"><i class="fa-brands fa-whatsapp whatsapp-bg"></i></a>
+                    </div>
+                </div>
+                <div class="minicon">
+                    <div class="con2">
+                        <h2>Our Products</h2>
+                    </div>
+                    <div class="con3">
+                        <a href="./products.html"><i class="fa-solid fa-hand-point-right"></i>LD BAGS</a>
+                        <a href="./products.html"><i class="fa-solid fa-hand-point-right"></i>HM BAGS</a>
+                        <a href="./products.html"><i class="fa-solid fa-hand-point-right"></i>LD ROLL</a>
+                        <a href="./products.html"><i class="fa-solid fa-hand-point-right"></i>PP BAGS</a>
+                        <a href="./products.html"><i class="fa-solid fa-hand-point-right"></i>PET POUCHES</a>
+                        <a href="./product.html?category=bopp-bags"><i class="fa-solid fa-hand-point-right"></i>BOPP BAGS</a>
+                        <a href="./product.html?category=pvc-pouches"><i class="fa-solid fa-hand-point-right"></i>PVC POUCHES</a>
+                        <a href="./product.html?category=snack-pouches"><i class="fa-solid fa-hand-point-right"></i>SNACK POUCHES</a>
+                    </div>
+                </div>
+                <div class="minicon">
+                    <div class="con2">
+                        <h2>Important Links</h2>
+                    </div>
+                    <div class="con3">
+                        <a href="./index.html"><i class="fa-solid fa-up-right-from-square"></i>Home</a>
+                        <a href="./about.html"><i class="fa-solid fa-up-right-from-square"></i>About</a>
+                        <a href="./product.html"><i class="fa-solid fa-up-right-from-square"></i>Products</a>
+                        <a href="./gallery.html"><i class="fa-solid fa-up-right-from-square"></i>Gallery</a>
+                        <a href="./contact.html"><i class="fa-solid fa-up-right-from-square"></i>Contact</a>
+                    </div>
+                </div>
+                <div class="minicon">
+                    <div class="con2">
+                        <h2>Our Location</h2>
+                    </div>
+                    <div class="subcon2">
+                        <div class="subcon3">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3935.47135001233!2d77.76955991111463!3d9.467666481927916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b06cf5bdef1fb23%3A0x1f33c1504021b47e!2sBobby%20Packaging!5e0!3m2!1sen!2sin!4v1718764469270!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                
+                
+                            <h2>1/527,H4 Unit Industrial Estate,Srivilliputtur Road,Sivakasi-626 124</h2>
+                            
+      
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+      </div>
+    <div class="seconddiv">
+        <div class="copy">
+            <h2>2024 &#169 All rights reserved & developed by<span> <a href="https://wa.me/7904303676/">GKcreations</a></span></h2>
+        </div>
+        <div class="copy1">
+            <h2>Privacy Policy</h2> 
+            <h2>Terms & Conditions</h2>
+            <h2>Get Support</h2>
+        </div>
+        <div class="copy2">
+            <a href="">Bobby Packaging</a>
+        </div>
+    </div>
+    <script src="./assets/js/product-showcase.js"></script>
+  </body>
+</html>
